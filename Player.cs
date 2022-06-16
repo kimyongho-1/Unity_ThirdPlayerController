@@ -53,9 +53,6 @@ public class Player : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(Managers._InputManger.Moving(this.transform, dest, 5f));
                 StartCoroutine(Managers._InputManger.Rotating(this.transform, degree, 2f));
-
-
-
             }
         }
     }
