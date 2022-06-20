@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float _moveSpeed ,_rotSpeed;
-    
+    public Transform _localCamera;
     void Start()
     {
         Managers mng = Managers.INSTANCE;
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
         Managers._InputManger.KeyAction -= OnKeyboad;
         Managers._InputManger.KeyAction += OnKeyboad;
     }
-
+   
     public void OnKeyboad() // 키보드 입력으로 실행
     {
         float rotSpeed = _rotSpeed;
