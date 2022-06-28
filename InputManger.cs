@@ -7,7 +7,7 @@ using UnityEngine;
 public class InputManger
 {
     public Action KeyAction = null;
-   
+
     private Transform _player ;
     public  Transform POS { get { return _player; } set { _player = value; } }
 
@@ -15,11 +15,11 @@ public class InputManger
     {
         if (Input.anyKey == false) { return; }
         if (KeyAction != null) 
-        { KeyAction.Invoke(); }
-        
+        { KeyAction.Invoke();     
+        }
     }
+ 
 
-  
 
     // 마우스 위치로 이동
     public IEnumerator Moving(Transform player ,Vector3 dest,float time )
